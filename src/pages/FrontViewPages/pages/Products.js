@@ -13,7 +13,7 @@ const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   return (
     <div className="max-w-[80vw] mx-auto">
-      <div className="my-10 text-center">
+      <div className="mt-10 mb-5 text-center">
         <InputSearch
           className="w-full md:w-1/2 p-2 text-xl border border-gray-500 rounded"
           placeholder="Search Your Product"
@@ -22,7 +22,7 @@ const Products = () => {
       <div className="w-full flex items-center gap-3 justify-start ">
         <Button
           name="Filters"
-          className="p-2 text-xl flex items-center gap-1"
+          className="p-2 text-xl flex items-center gap-1 cursor-pointer"
           onClick={() => setShowFilters((prev) => !prev)}
         >
           <CiBoxList />
@@ -36,7 +36,7 @@ const Products = () => {
         <div
           className={`${
             showFilters ? "hidden transform -translate-x-250" : "basis-1/5"
-          } border-[2px] border-[#52ab98] transition delay-100 duration-300 ease-in-out`}
+          } border-[2px] border-[#52ab98] transition delay-100 duration-1000 ease-in-out`}
         >
           {filtersData?.map((item, id) => (
             <div key={item.id}>
@@ -48,7 +48,7 @@ const Products = () => {
         <div
           className={`${
             showFilters ? "" : "basis-4/5 "
-          }  flex flex-wrap gap-3 justify-center transition delay-100 duration-300 ease-in-out`}
+          }  flex flex-wrap gap-3 justify-center transition delay-100 duration-1000 ease-in-out`}
         >
           {products &&
             products.map((product) => (
