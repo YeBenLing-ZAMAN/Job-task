@@ -21,7 +21,7 @@ export const products = [
       "https://images.unsplash.com/photo-1541029071515-84cc54f84dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
     productName: "Corsair Vengeance LPX 16GB",
     category: "RAM",
-    status: "In Stock",
+    status: "Out Of Stock",
     price: 99.99,
     description:
       "Corsair Vengeance LPX is a high-performance 16GB RAM kit for smooth multitasking.",
@@ -53,7 +53,7 @@ export const products = [
       "https://images.unsplash.com/photo-1675893857082-803b1a2bb6f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     productName: "EVGA SuperNOVA 750 G5",
     category: "Power supply Unit",
-    status: "In Stock",
+    status: "Out Of Stock",
     price: 139.99,
     description:
       "The EVGA SuperNOVA 750 G5 is a reliable and efficient power supply for high-performance PCs.",
@@ -117,7 +117,7 @@ export const products = [
       "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
     productName: "GIGABYTE B550 AORUS PRO",
     category: "Mother Board",
-    status: "In Stock",
+    status: "Out Of Stock",
     price: 189.99,
     description:
       "The GIGABYTE B550 AORUS PRO offers excellent performance and reliability for gaming PCs.",
@@ -277,7 +277,7 @@ export const products = [
       "https://images.unsplash.com/photo-1542978709-19c95dc3bc7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
     productName: "Kingston HyperX Fury 8GB",
     category: "RAM",
-    status: "In Stock",
+    status: "Out Of Stack",
     price: 69.99,
     description:
       "Kingston HyperX Fury 8GB is an affordable and reliable RAM option for budget builds.",
@@ -309,7 +309,7 @@ export const products = [
       "https://images.unsplash.com/photo-1555617778-02518510b9fa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8YXBwbGV8fHx8fHwxNjkwOTU5Mzgx&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600",
     productName: "Intel Core i5-11500",
     category: "CPU",
-    status: "In Stock",
+    status: "Out Of Stock",
     price: 149.99,
     description:
       "The Intel Core i5-11500 is a powerful and high-performance CPU for gaming and multitasking.",
@@ -325,7 +325,7 @@ export const products = [
       "https://plus.unsplash.com/premium_photo-1681426669771-d2113672a49b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8YXBwbGV8fHx8fHwxNjkwOTU5NzU5&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600",
     productName: "ASUS ROG Strix Z590-E",
     category: "Mother Board",
-    status: "In Stock",
+    status: "Out Of Stack",
     price: 199.99,
     description:
       "The ASUS ROG Strix Z590-E is a feature-packed motherboard for gaming enthusiasts.",
