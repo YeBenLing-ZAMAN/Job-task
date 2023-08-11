@@ -156,7 +156,7 @@ export const products = [
     ],
     productName: "Intel Core i7-11700K",
     category: "CPU",
-    status: "In Stock",
+    status: "Out Of Stock",
     price: 349.99,
     description:
       "The Intel Core i7-11700K is a powerful and high-performance CPU for gaming and multitasking.",

@@ -1,21 +1,22 @@
-import { Button } from "antd";
-import { Link } from "react-router-dom";
 import CustomLink from "../Link";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <div className="border bg-white p-4 flex justify-around">
       <div className="flex justify-center">
-        <Link href={"/"} className="text-3xl text-black hover:text-[#2b6777]">
+        <CustomLink
+          href="/"
+          className="text-3xl text-black hover:text-[#2b6777]"
+        >
           REPLIQ
-        </Link>
+        </CustomLink>
       </div>
-      <nav className="text-gray-900 flex justify-center gap-x-6 text-md">
+      <nav className="text-gray-900 flex justify-center items-center gap-x-6 text-md">
         <CustomLink href="/" className="hover:text-[#2b6777]">
           Home
         </CustomLink>
         <p>|</p>
-        <CustomLink href="/product" className="hover:text-[#2b6777]">
+        <CustomLink href="/products" className="hover:text-[#2b6777]">
           Product
         </CustomLink>
         <p>|</p>
@@ -23,14 +24,22 @@ export default function Navbar() {
           cart
         </CustomLink>
         <p>|</p>
-        <Button className="bg-red-500 text-[#fff] hover:bg-[#2b6777]">
+        <CustomLink
+          href="/login"
+          className="border-1 rounded-md px-2 py-1 font-semibold text-[#fff] text-md bg-red-500 border-red-500 hover:bg-red-600 cursor-pointer"
+        >
           login/signup
-        </Button>
+        </CustomLink>
         <p>|</p>
-        <Button className="bg-red-500 text-[#fff] hover:bg-[#2b6777]">
+        <CustomLink
+          href="/dashboard"
+          className="border-1 rounded-md px-2 py-1 font-semibold text-[#fff] text-md bg-red-500 border-red-500 hover:bg-red-600 cursor-pointer"
+        >
           Dashboard
-        </Button>
+        </CustomLink>
       </nav>
     </div>
   );
-}
+};
+
+export default Navbar;
