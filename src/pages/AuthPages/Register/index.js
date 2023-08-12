@@ -5,8 +5,10 @@ import Input from "../../../components/Input/Input";
 import CustomLink from "../../../components/Link";
 import BannerCarousel from "../../../components/BannerCarousel";
 import { BannerCarouselContent } from "../../../assets/BannerData/BannerImage";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 
 const Register = () => {
+  const [mobile, setMobile] = useState();
   const [showPassword, setShowPassword] = useState(false);
   const [value, setValue] = useState({
     phone_number: "",
@@ -21,6 +23,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(value);
+    console.log(mobile);
   };
   return (
     <div className="p-6 md:p-0 md:max-w-[70vw] mx-auto md:min-h-[80vh]">
@@ -54,16 +57,24 @@ const Register = () => {
                     isRequired="true"
                   />
                 </div>
-                <div className="mb-2 md:flex-col items-center justify-center gap-4">
-                  <Input
-                    label="Phone"
-                    type="text"
-                    name="phone_number"
-                    placeholder="Enter your Phone Number"
-                    onChange={handleChange}
-                    value={value.phone_number}
-                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
-                    isRequired="true"
+                <div className="mb-2">
+                  <label htmlFor="phone-input">
+                    Mobile <span style={{ color: "red" }}>*</span>
+                  </label>
+                  <PhoneInput
+                    international
+                    defaultCountry="BD"
+                    countryCallingCodeEditable={false}
+                    placeholder="Enter your phone number"
+                    value={mobile}
+                    onChange={setMobile}
+                    name="mobile"
+                    className="block flex mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
+                    style={{
+                      border: "1px solid #b1b7c1",
+                      padding: "6px 0",
+                      borderRadius: "0 3px 3px 0",
+                    }}
                   />
                 </div>
                 <div className="mb-2">
