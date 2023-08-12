@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../../components/Button";
 import HorizontalProductCard from "../../../components/Card/horizontalProductCard";
 import { products } from "../../../assets/ProductData/products";
+import CustomLink from "../../../components/Link";
 
 const Cart = () => {
   return (
@@ -23,9 +24,12 @@ const Cart = () => {
         >
           <p className="text-2xl">Total :</p>
           <h1 className="text-5xl">$600</h1>
-          <Button className="mt-4 md:mt-16 w-full border-2 rounded px-6 py-2 font-semibold text-lg border-red-500 text-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
-            Checkout
-          </Button>
+
+          <CustomLink href="/checkout">
+            <Button className="mt-4 md:mt-16 w-full border-2 rounded px-6 py-2 font-semibold text-lg border-red-500 text-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer">
+              Checkout
+            </Button>{" "}
+          </CustomLink>
         </div>
       </div>
     </div>
