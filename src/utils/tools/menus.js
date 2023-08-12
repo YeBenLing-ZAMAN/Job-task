@@ -3,6 +3,10 @@ import {
   ShopOutlined,
   ShoppingCartOutlined,
   UserOutlined,
+  UsergroupAddOutlined,
+  UnorderedListOutlined,
+  CodeSandboxOutlined,
+  UpSquareOutlined,
 } from "@ant-design/icons";
 
 export const Menus = [
@@ -15,35 +19,25 @@ export const Menus = [
   {
     label: "customers",
     key: "/dashboard/customers-list",
-    icon: <ShopOutlined />,
+    icon: <UsergroupAddOutlined />,
     permission: ["admin"],
     children: [
       {
-        label: "Customers",
+        label: "Customers List",
         key: "/dashboard/customers-list",
         icon: <UserOutlined />,
-      },
-      {
-        label: "Customers",
-        key: "/dashboard/customers-details",
-        icon: <ShoppingCartOutlined />,
       },
     ],
   },
   {
     label: "Orders List",
     key: "/dashboard/order-list",
-    icon: <ShopOutlined />,
+    icon: <UnorderedListOutlined />,
     permission: ["admin"],
     children: [
       {
-        label: "Customers",
+        label: "Orders List",
         key: "/dashboard/orders-list",
-        icon: <UserOutlined />,
-      },
-      {
-        label: "Customers",
-        key: "/dashboard/orders-details",
         icon: <ShoppingCartOutlined />,
       },
     ],
@@ -55,14 +49,14 @@ export const Menus = [
     permission: ["admin"],
     children: [
       {
-        label: "Customers",
+        label: "Products List",
         key: "/dashboard/products-list",
-        icon: <UserOutlined />,
+        icon: <CodeSandboxOutlined />,
       },
       {
-        label: "Customers",
-        key: "/dashboard/products-details",
-        icon: <ShoppingCartOutlined />,
+        label: "Add Product",
+        key: "/dashboard/add-product",
+        icon: <UpSquareOutlined />,
       },
     ],
   },

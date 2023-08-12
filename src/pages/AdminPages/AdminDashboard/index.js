@@ -12,7 +12,7 @@ import {
   oneProduct,
 } from "../../../assets/DashboardData/DashboardData";
 
-function AdminDashboard() {
+const AdminDashboard = () => {
   const [orders, setOrders] = useState(0);
   const [inventory, setInventory] = useState(0);
   const [customers, setCustomers] = useState(0);
@@ -95,7 +95,7 @@ function AdminDashboard() {
       </Space>
     </Space>
   );
-}
+};
 
 function DashboardCard({ title, value, icon }) {
   return (
