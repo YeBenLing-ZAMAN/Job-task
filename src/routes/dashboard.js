@@ -40,9 +40,10 @@ const App = () => {
 
         <Content
           style={{
+            overflow: "scroll",
             margin: "24px 16px",
             minHeight: "calc(100vh - 179px)",
-            padding: 24,
+            padding: "24px",
             background: colorBgContainer,
           }}
         >
