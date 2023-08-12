@@ -6,7 +6,10 @@ import { HiMinus, HiOutlinePlus, HiOutlineTrash } from "react-icons/hi";
 export default function HorizontalProductCard({ product }) {
   const { _id, image, productName, price, status, averageRating } = product;
   return (
-    <div className="border-2 border-sky-500 w-full min-h-[150px] px-2 my-3 md:px-0">
+    <div
+      className="border-3 border-red-500 w-full min-h-[150px] px-2 my-3"
+      style={{ border: "1px solid black" }}
+    >
       <div className="flex gap-x-6 justify-between items-center min-h-[150px]">
         <div className="flex gap-2 items-center">
           <CustomLink href={`/product/${_id}`} className="text-8xl">

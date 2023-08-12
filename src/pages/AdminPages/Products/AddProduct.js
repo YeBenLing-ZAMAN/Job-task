@@ -1,12 +1,4 @@
-import {
-  Form,
-  Button,
-  Checkbox,
-  DatePicker,
-  Input,
-  Select,
-  InputNumber,
-} from "antd";
+import { Form, Button, Input, Select, InputNumber } from "antd";
 import { useState } from "react";
 
 function App() {
