@@ -8,14 +8,14 @@ const Dashboard = () => {
   return (
     <>
       {/* <BrowserRouter> */}
-      <div className="home_wrapper" show-menu={show ? "false" : "true"}>
+      <div className="flex" show-menu={show ? "false" : "true"}>
         {/* sidebar */}
-        <div className="sidebar_wrapper">
+        <div className="w-72 bg-white fixed left-0 h-full overflow-auto transition-all ease-in-out duration-300 overflow-x-hidden z-50 border border-solid border-gray-300">
           <Sidebar sideBarShow={setShow} />
         </div>
         {!show && (
           <div
-            className="menu_backdrop"
+            className="hidden tablet:block"
             style={{
               position: "fixed",
               backgroundColor: "#0000001c",
@@ -27,11 +27,11 @@ const Dashboard = () => {
           ></div>
         )}
         {/* body container */}
-        <div className="body_content_wrapper">
+        <div className="relative ml-auto transition-all ease-in-out w-full tablet:w-[calc(100%-0px)] laptop:w-[calc(100%-103px)]">
           {/* header */}
           {/* <Header setShow={setShow} show={show} /> */}
           <div
-            className="content_wrapper"
+            className="pt-5 pr-5 pl-5 relative"
             style={{
               minHeight: "85vh",
               display: "flex",
