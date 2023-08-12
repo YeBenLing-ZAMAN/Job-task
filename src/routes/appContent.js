@@ -7,6 +7,7 @@ import CustomersList from "../pages/AdminPages/Customers/CustomersLists";
 import OrderLists from "../pages/AdminPages/Orders/OrdersLists";
 import ProductsList from "../pages/AdminPages/Products/ProductsList";
 import AddProduct from "../pages/AdminPages/Products/AddProduct";
+import NotFound from "../pages/DashboardContent/NotFound";
 
 const AppContent = () => {
   return (
@@ -18,6 +19,7 @@ const AppContent = () => {
         <Route path="/orders-list" element={<OrderLists />} />
         <Route path="/Products-list" element={<ProductsList />} />
         <Route path="/add-product" element={<AddProduct />} />
+        <Route path="/*" element={<NotFound />} />
       </Route>
     </Routes>
   );

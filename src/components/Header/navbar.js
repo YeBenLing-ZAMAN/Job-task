@@ -1,6 +1,11 @@
+import { Badge } from "antd";
 import CustomLink from "../Link";
+import { BsCartCheck } from "react-icons/bs";
+import { useAppSelector } from "../../redux/hook";
 
 const Navbar = () => {
+  const { totalQuantity } = useAppSelector((state) => state.cart);
+
   return (
     <div className="border bg-white p-4 flex justify-around">
       <div className="flex justify-center">
@@ -21,7 +26,9 @@ const Navbar = () => {
         </CustomLink>
         <p>|</p>
         <CustomLink href="/cart" className="hover:text-[#2b6777]">
-          cart
+          <Badge count={totalQuantity}>
+            <BsCartCheck style={{ fontSize: "22px" }} />
+          </Badge>
         </CustomLink>
         <p>|</p>
         <CustomLink
