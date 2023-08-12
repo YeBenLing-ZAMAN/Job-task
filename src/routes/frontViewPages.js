@@ -8,6 +8,8 @@ import ProductDetails from "../pages/FrontViewPages/pages/ProductDetails";
 import Products from "../pages/FrontViewPages/pages/Products";
 import Cart from "../pages/FrontViewPages/pages/Cart";
 import Checkout from "../pages/FrontViewPages/pages/Checkout";
+import Login from "../pages/AuthPages/Login";
+import Register from "../pages/AuthPages/Register";
 
 const FrontViewPages = () => {
   return (
@@ -19,6 +21,8 @@ const FrontViewPages = () => {
         <Route path="/products" index element={<Products />} />
         <Route path="/cart" index element={<Cart />} />
         <Route path="/checkout" index element={<Checkout />} />
+        <Route path="/login" index element={<Login />} />
+        <Route path="/register" index element={<Register />} />
       </Routes>
       <Footer />
     </>

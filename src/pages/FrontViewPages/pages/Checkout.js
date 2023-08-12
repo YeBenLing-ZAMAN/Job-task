@@ -16,7 +16,9 @@ const Checkout = () => {
           <div
             className={`basis-2/5 w-full md:bg-slate-100 md:p-4 border rounded mt-6 md:min-h-[40vh]`}
           >
-            <div className="min-h-[280px] max-h-[300px] overflow-y-scroll scroll-smooth"></div>
+            <div className="min-h-[280px] max-h-[300px] overflow-y-scroll scroll-smooth">
+              {/* checkout product will show there  (image,name, quantity, price)*/}
+            </div>
             <div>
               <div className="w-full flex justify-between">
                 <p>Subtotal:</p>

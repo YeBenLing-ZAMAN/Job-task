@@ -6,12 +6,14 @@ import CustomLink from "../../../components/Link";
 import BannerCarousel from "../../../components/BannerCarousel";
 import { BannerCarouselContent } from "../../../assets/BannerData/BannerImage";
 
-const Login = () => {
+const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [value, setValue] = useState({
-    user_id: "",
+    phone_number: "",
     password: "",
-    otpCode: "",
+    c_password: "",
+    first_name: "",
+    last_name: "",
   });
   const handleChange = (e) => {
     setValue({ ...value, [e.target.name]: e.target.value });
@@ -26,21 +28,45 @@ const Login = () => {
         <div className={`basis-3/5 w-full flex flex-wrap gap-3 justify-center`}>
           <div className="w-full bg-slate-100 md:p-4 border rounded mt-6 items-center md:min-h-[40vh]">
             <div className="p-4">
-              <h1 className="text-5xl font-bold text-center">login</h1>
+              <h1 className="text-5xl font-bold text-center">Register</h1>
               <form onSubmit={handleSubmit} className="w-full md:w-1/2 m-auto">
-                <div className="md:flex-col items-center justify-center gap-4">
+                <div className="mb-2 md:flex-col items-center justify-center gap-4">
                   <Input
-                    label="Phone"
+                    label="Full Name"
                     type="text"
-                    name="phone"
-                    placeholder="Enter your Phone Number"
+                    name="first_name"
+                    placeholder="Enter your First Name "
                     onChange={handleChange}
-                    value={value.phone}
+                    value={value.first_name}
                     className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
                     isRequired="true"
                   />
                 </div>
-                <div className="relative">
+                <div className="mb-2 md:flex-col items-center justify-center gap-4">
+                  <Input
+                    label="Last Name"
+                    type="text"
+                    name="last_name"
+                    placeholder="Enter your Last Name "
+                    onChange={handleChange}
+                    value={value.last_name}
+                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    isRequired="true"
+                  />
+                </div>
+                <div className="mb-2 md:flex-col items-center justify-center gap-4">
+                  <Input
+                    label="Phone"
+                    type="text"
+                    name="phone_number"
+                    placeholder="Enter your Phone Number"
+                    onChange={handleChange}
+                    value={value.phone_number}
+                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    isRequired="true"
+                  />
+                </div>
+                <div className="mb-2">
                   <Input
                     label="Password"
                     type={`${showPassword ? "text" : "password"}`}
@@ -48,6 +74,19 @@ const Login = () => {
                     placeholder="Enter your password"
                     onChange={handleChange}
                     value={value.password}
+                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    inputGroupClass="right"
+                    isRequired="true"
+                  />
+                </div>
+                <div className="relative mb-2">
+                  <Input
+                    label="Confirm Password"
+                    type={`${showPassword ? "text" : "password"}`}
+                    name="c_password"
+                    placeholder="Confirm Your Password"
+                    onChange={handleChange}
+                    value={value.c_password}
                     className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
                     inputGroupClass="right"
                     isRequired="true"
@@ -64,7 +103,7 @@ const Login = () => {
                   className="mt-4 md:mt-4 w-30 md:w-36 border-2 rounded px-6 py-2 font-semibold text-lg border-red-500 text-red-500 hover:bg-red-500 hover:text-[#fff] cursor-pointer"
                   type="submit"
                 >
-                  Login
+                  Register
                 </Button>
                 <div className="w-full flex justify-center mt-10 text-start">
                   <p>
@@ -78,10 +117,10 @@ const Login = () => {
                   <p className="login_nav_break_point"> | </p>
                   <p>
                     <CustomLink
-                      href="/register"
+                      href="/login"
                       className="text-black text-sm font-semibold px-5 hover:border-b-2 hover:border-[#2b6777] hover:text-[#2b6777]"
                     >
-                      Register
+                      login
                     </CustomLink>{" "}
                   </p>
                 </div>
@@ -101,4 +140,4 @@ const Login = () => {
     </div>
   );
 };
-export default Login;
+export default Register;

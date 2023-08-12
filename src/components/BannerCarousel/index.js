@@ -6,10 +6,10 @@ const contentStyle = {
   color: "#000",
 };
 
-const BannerCarousel = ({ content }) => {
+const BannerCarousel = ({ content, imageClassName }) => {
   return (
     <>
-      <Carousel effect="fade" autoplay style={{ margin: "20px 0px" }}>
+      <Carousel effect="fade" autoplay>
         {content?.map((d, index) => (
           <div key={index}>
             <Row>
@@ -19,7 +19,11 @@ const BannerCarousel = ({ content }) => {
                 }}
                 style={contentStyle}
               >
-                <img src={d} alt="drawing_image" />
+                <img
+                  src={d}
+                  className={`${imageClassName}`}
+                  alt="drawing_image"
+                />
               </Col>
             </Row>
           </div>
