@@ -121,14 +121,19 @@ function RecentOrders() {
           {
             title: "Title",
             dataIndex: "title",
+            width: 300,
           },
           {
             title: "Quantity",
             dataIndex: "quantity",
+            sorter: (a, b) => a.quantity - b.quantity,
+            width: 150,
           },
           {
             title: "Price",
             dataIndex: "discountedPrice",
+            sorter: (a, b) => a.discountedPrice - b.discountedPrice,
+            width: 150,
           },
         ]}
         dataSource={dataSource}

@@ -25,20 +25,23 @@ const CustomersList = () => {
             {
               title: "First Name",
               dataIndex: "firstName",
+              width: 300,
             },
             {
               title: "LastName",
               dataIndex: "lastName",
+              width: 150,
             },
             {
               title: "Email",
               dataIndex: "email",
+              width: 150,
             },
             {
               title: "Phone",
               dataIndex: "phone",
+              width: 150,
             },
-
             {
               title: "address",
               dataIndex: "address",
@@ -49,6 +52,7 @@ const CustomersList = () => {
                   </span>
                 );
               },
+              width: 500,
             },
           ]}
           dataSource={dataSource}
