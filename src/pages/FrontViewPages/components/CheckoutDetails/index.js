@@ -32,7 +32,7 @@ const CheckoutDetails = () => {
               placeholder="Enter your Full Name"
               onChange={handleChange}
               value={value.full_name}
-              className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+              className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
               isRequired="true"
             />
             <Input
@@ -42,7 +42,7 @@ const CheckoutDetails = () => {
               placeholder="Enter your Phone Number"
               onChange={handleChange}
               value={value.phone}
-              className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+              className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
               isRequired="true"
             />
           </div>
@@ -54,7 +54,7 @@ const CheckoutDetails = () => {
               placeholder="Enter your Email Address"
               onChange={handleChange}
               value={value.email}
-              className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+              className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
               isRequired="true"
             />
             <span className="block">
@@ -63,7 +63,7 @@ const CheckoutDetails = () => {
               </label>
               <DatePicker
                 selected={startDate}
-                className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                 onChange={(date) => setStartDate(date)}
               />
             </span>
@@ -77,7 +77,7 @@ const CheckoutDetails = () => {
               rows={10}
               onChange={handleChange}
               value={value.note}
-              className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+              className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
               isRequired="true"
             />
             <div className="mt-4">

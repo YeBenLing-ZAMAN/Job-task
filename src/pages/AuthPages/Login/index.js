@@ -36,7 +36,7 @@ const Login = () => {
                     placeholder="Enter your Phone Number"
                     onChange={handleChange}
                     value={value.phone}
-                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                     isRequired="true"
                   />
                 </div>
@@ -48,7 +48,7 @@ const Login = () => {
                     placeholder="Enter your password"
                     onChange={handleChange}
                     value={value.password}
-                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                     inputGroupClass="right"
                     isRequired="true"
                   />

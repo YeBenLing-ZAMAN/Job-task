@@ -38,7 +38,7 @@ const Register = () => {
                     placeholder="Enter your First Name "
                     onChange={handleChange}
                     value={value.first_name}
-                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                     isRequired="true"
                   />
                 </div>
@@ -50,7 +50,7 @@ const Register = () => {
                     placeholder="Enter your Last Name "
                     onChange={handleChange}
                     value={value.last_name}
-                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                     isRequired="true"
                   />
                 </div>
@@ -62,7 +62,7 @@ const Register = () => {
                     placeholder="Enter your Phone Number"
                     onChange={handleChange}
                     value={value.phone_number}
-                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                     isRequired="true"
                   />
                 </div>
@@ -74,7 +74,7 @@ const Register = () => {
                     placeholder="Enter your password"
                     onChange={handleChange}
                     value={value.password}
-                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                     inputGroupClass="right"
                     isRequired="true"
                   />
@@ -87,7 +87,7 @@ const Register = () => {
                     placeholder="Confirm Your Password"
                     onChange={handleChange}
                     value={value.c_password}
-                    className="block mt-1 p-2 border-1 border-neutral-600 rounded text-md w-60 md:w-72"
+                    className="block mt-1 p-2 border-1 border-slate-300 rounded text-md w-60 md:w-72"
                     inputGroupClass="right"
                     isRequired="true"
                   />
