@@ -3,6 +3,7 @@ import { Layout, Button, theme } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import AppContent from "./appContent";
 import SideBar from "../components/Sidebar/SideBar";
+import CustomLink from "../components/Link";
 
 const { Header, Sider, Content, Footer } = Layout;
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
               height: 64,
             }}
           />
+          <CustomLink href={`/`}>Home page</CustomLink>
         </Header>
         {/******* Dashboard content ********/}
 
