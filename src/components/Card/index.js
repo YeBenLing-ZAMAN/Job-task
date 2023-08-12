@@ -5,10 +5,6 @@ import StarRatings from "react-star-ratings";
 const ProductCard = ({ product }) => {
   const { _id, image, productName, category, price, status, averageRating } =
     product;
-  // const handleProduct = (product) => {
-  //   alert("Successfully added product on card");
-  //   console.log(product);
-  // };
 
   return (
     <div className="lg:w-1/5 md:w-1/3 sm:w-1/2 p-2 w-full relative shadow-md hover:shadow-2xl p-2 transition delay-100 duration-300">

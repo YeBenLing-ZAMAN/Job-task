@@ -1,15 +1,17 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import StarRatings from "react-star-ratings";
 import { products } from "../../../assets/ProductData/products";
 import Button from "../../../components/Button";
 import Comment from "../../../components/Comment";
 import BannerCarousel from "../../../components/BannerCarousel";
+import { useAppDispatch } from "../../../redux/hook";
+import { addToCart } from "../../../redux/features/cart/cartSlice";
 
 const ProductDetails = ({ product }) => {
   const { id } = useParams();
   const result = products.find((product) => product._id === id);
-
+  // console.log(result);
   const {
     averageRating,
     brand,
@@ -24,10 +26,15 @@ const ProductDetails = ({ product }) => {
     comment,
     carouselImage,
   } = result;
+  const navigate = useNavigate();
+
+  const dispatch = useAppDispatch();
 
   const handleProduct = (product) => {
-    alert("Successfully added product");
-    console.log(product);
+    // console.log(product);
+    dispatch(addToCart(product));
+    alert("Successfully added product on card");
+    navigate("/cart");
   };
   return (
     <div className="md:max-w-[80vw] mx-auto min-h-[80vh]">
@@ -74,7 +81,7 @@ const ProductDetails = ({ product }) => {
             <div className="w-full mt-5">
               <Button
                 className="w-full border-2 px-6 font-semibold text-lg border-[#52ab98] text-[#52ab98] hover:bg-[#52ab98] hover:text-[#fff] cursor-pointer"
-                onClick={() => handleProduct(product)}
+                onClick={() => handleProduct(result)}
               >
                 Add To cart
               </Button>
@@ -82,7 +89,7 @@ const ProductDetails = ({ product }) => {
             <div className="w-full mt-2">
               <Button
                 className="w-full border-2 px-6 font-semibold text-lg border-[#F86F03] text-[#F86F03] hover:bg-[#F86F03] hover:text-[#fff] cursor-pointer"
-                onClick={() => handleProduct(product)}
+                onClick={() => handleProduct(result)}
               >
                 Buy Now
               </Button>

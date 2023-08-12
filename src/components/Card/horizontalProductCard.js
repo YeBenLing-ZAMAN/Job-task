@@ -2,8 +2,13 @@ import StarRatings from "react-star-ratings";
 import CustomLink from "../Link";
 import Button from "../Button";
 import { HiMinus, HiOutlinePlus, HiOutlineTrash } from "react-icons/hi";
+import {
+  addToCart,
+  removeFromCart,
+  removeOne,
+} from "../../redux/features/cart/cartSlice";
 
-export default function HorizontalProductCard({ product }) {
+export default function HorizontalProductCard({ product, dispatch }) {
   const { _id, image, productName, price, status, averageRating } = product;
   return (
     <div
@@ -55,19 +60,26 @@ export default function HorizontalProductCard({ product }) {
         </div>
         <div className="flex flex-col items-end justify-between gap-3">
           <p className="md:border md:py-1 px-2 md:bg-gray-100 rounded-sm font-semibold">
-            Total: ${price}
+            Total: ${price?.toFixed(2)}
           </p>
           <div className="flex items-center justify-center">
-            <Button className="px-2 text-xl pt-1 border-2 border-[#52ab98] text-[#52ab98] rounded cursor-pointer">
+            <Button
+              onClick={() => dispatch(addToCart(product))}
+              className="px-2 text-xl pt-1 border-2 border-[#52ab98] text-[#52ab98] rounded cursor-pointer"
+            >
               <HiOutlinePlus size="20" />
             </Button>
-            <p className="px-6">3</p>
-            <Button className="px-2 text-xl pt-1 border-2 border-[#52ab98] text-[#52ab98] rounded cursor-pointer">
+            <p className="px-6">{product?.quantity}</p>
+            <Button
+              onClick={() => dispatch(removeOne(product))}
+              className="px-2 text-xl pt-1 border-2 border-[#52ab98] text-[#52ab98] rounded cursor-pointer"
+            >
               <HiMinus size="20" />
             </Button>
           </div>
           <Button
             variant="destructive"
+            onClick={() => dispatch(removeFromCart(product))}
             className="px-2 text-xl pt-1 border-2 border-red-500 text-red-500 rounded cursor-pointer"
           >
             <HiOutlineTrash size="20" />
