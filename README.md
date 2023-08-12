@@ -16,7 +16,7 @@ _A simple e-commerce web application powered by react.js_
 ### Languages/Technologies (Frontend)
 
 - JavaScript
-- Next.js
+- React.js
 - ant design framework
 - tailwind
 - reduxjs
