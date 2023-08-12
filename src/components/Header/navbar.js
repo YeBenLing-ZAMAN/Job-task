@@ -7,7 +7,7 @@ const Navbar = () => {
   const { totalQuantity } = useAppSelector((state) => state.cart);
 
   return (
-    <div className="border bg-white p-4 flex justify-around">
+    <div className="border bg-white p-4 flex justify-around flex-wrap">
       <div className="flex justify-center">
         <CustomLink
           href="/"
@@ -16,7 +16,7 @@ const Navbar = () => {
           REPLIQ
         </CustomLink>
       </div>
-      <nav className="text-gray-900 flex justify-center items-center gap-x-6 text-md">
+      <nav className="text-gray-900 flex justify-center items-center flex-wrap gap-x-6 gap-y-3 text-md">
         <CustomLink href="/" className="hover:text-[#2b6777]">
           Home
         </CustomLink>
