@@ -90,9 +90,7 @@ const AdminDashboard = () => {
           value={revenue}
         />
       </Space>
-      <Space>
-        <RecentOrders />
-      </Space>
+      <RecentOrders />
     </Space>
   );
 };
@@ -137,7 +135,9 @@ function RecentOrders() {
           },
         ]}
         dataSource={dataSource}
-        pagination={false}
+        pagination={{
+          pageSize: 5,
+        }}
       ></Table>
     </>
   );
