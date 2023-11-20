@@ -1,4 +1,4 @@
-# [REPLIQ](https://job-task-liard.vercel.app/)
+# [REPLIQ JOB TASKS](https://job-task-liard.vercel.app/)
 
 _A simple e-commerce web application powered by react.js_
 
